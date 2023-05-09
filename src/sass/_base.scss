@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&display=swap');
+
+/////////////////////////////////
+// COLOR VARIABLES
+$gr-color: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+$color-primary: #43e97b;
+$color-secondary: #38f9d7;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #777777; //aaa
+
+$color-white: #fff;
+$color-black: #000;
+
+/////////////////////////////////
+// RESPONSIVE BREAKPOINTS
+
+// if width <= 1200px
+$bp-tab-landscape: 75em;
+
+// if width <= 900px
+$bp-tab-portrait: 56.25em;
+
+// if width <= 600px
+$bp-phone: 37.5em;
+
+// if width <= 400px
+$bp-small: 25em;
+
+// if width >= 1800px
+$bp-big-desktop: 112.5em;
+
+/////////////////////////////////
+// FONT VARIABLES
+
+$font-primary: 'Open Sans', sans-serif;
+$font-size-heading: 2.5rem;
+$font-size-default: 1.6rem;
+
+/////////////////////////////////
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  /////////////////////////////////
+
+  @media only screen and (max-width: $bp-phone) {
+    font-size: 50%; // 8px
+  }
+
+  @media only screen and (min-width: $bp-big-desktop) {
+    font-size: 100%; // 16px
+  }
+}
+
+body {
+  font-family: $font-primary;
+  font-weight: 300;
+  line-height: 1.6;
+
+  color: $color-grey-light-2;
+  background-color: $color-grey-light-1;
+  position: relative;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+#root {
+  height: 100vh;
+  padding: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width: $bp-phone) {
+    padding: 0;
+    display: block;
+  }
+}

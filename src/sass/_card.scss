@@ -1,0 +1,16 @@
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 0.2rem 1rem rgba($color-black, 0.2);
+  //box-shadow: 0 0.2rem 0.8rem rgba($color-black, 0.26);
+
+  &--width {
+    width: 100%;
+  }
+
+  &--less {
+    @media only screen and (max-width: $bp-phone) {
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
+}
